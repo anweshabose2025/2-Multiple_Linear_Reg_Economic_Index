@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Economic Index Price Prediction</title>
+</head>
+<body>
+    <h2>Please Submit the following details to get your Index Price Predicted</h2>
+    <form action="/" method="post">
+    <label for="year">Year:</label>
+    <input type="text" id="year" name="year" placeholder="Year">
+    <label for="month">Month:</label>
+    <input type="text" id="month" name="month" placeholder="Month">
+    <label for="interest_rate">Interest Rate:</label>
+    <input type="text" id="interest_rate" name="interest_rate" value="0">
+    <label for="unemployment_rate">Unemployment Rate:</label>
+    <input type="text" id="unemployment_rate" name="unemployment_rate" value="0">
+    <input type="submit" value="Submit">
+    </form>
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
